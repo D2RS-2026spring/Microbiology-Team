@@ -1,25 +1,21 @@
 project:
-  type: book
+  type: website
+  output-dir: _book
 
-book:
-  title: "1"
-  author: "Norah Jones"
-  date: "2026/5/7"
-  chapters:
-    - index.qmd
-    - introMainTextFigures-GitHubVersion.qmd
-    - SuppFig6-CooperativeInteractions.qmd
-    - referencesSuppFigs10&11-StochasticModel.qmd
-
-bibliography: references.bib
+website:
+  title: "微生物群落协同生长驱动多稳态论文复现"
+  navbar:
+    left:
+      - href: index.qmd
+        text: 首页
 
 format:
   html:
-    theme:
-      - cosmo
-      - brand
-  pdf:
-    documentclass: scrreprt
+    theme: cosmo
+    toc: true
+    toc-depth: 3
+    code-fold: false
+    number-sections: true
 
-
-
+render:
+  - index.qmd
